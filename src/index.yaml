@@ -1,0 +1,5 @@
+ProjectTitle: range-slider
+
+PageList:
+- file: page.html
+  ready: 50
