@@ -10,12 +10,13 @@ $(document).ready(function() {
   noUiSlider.create(slider, {
     start: 20,
     connect: true,
+    // tooltips: [true, wNumb({ decimals: 1 })],
     range: {
       'min': 0,
       'max': 100
     }
   });
-
+  //
   slider.noUiSlider.on('update', function( values, handle ) {
     sliderValue.value = Math.round(values[handle]);
   });
