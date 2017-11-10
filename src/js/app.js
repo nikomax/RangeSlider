@@ -1,34 +1,39 @@
 import sayHello from './lib/sayHello.js';
 import $ from 'jquery';
-import noUiSlider from './lib/nouislider';
-
+import './lib/rangeslider.js';
 $(document).ready(function() {
 
-  var slider = document.getElementById('slider');
-  var sliderValue = document.querySelector('.input');
+  $('.input').attr('value', $('.range').attr('value'));
 
-  noUiSlider.create(slider, {
-    start: 20,
-    connect: true,
-    // tooltips: [true, wNumb({ decimals: 1 })],
-    range: {
-      'min': 0,
-      'max': 100
+  $('.range').on('input', function(e) {
+    $(this).parents('.range-slider').find('.input').attr('value', e.currentTarget.value);
+    $(this).parents('.range-slider').find('.input').val(e.currentTarget.value);
+    $(this).attr('value', e.currentTarget.value);
+  });
+
+  $('.range').rangeslider({
+    polyfill: false
+  });
+
+  $('.rangeslider__handle').append($('#handle'));
+  $('.rangeslider__fill').append($('#ruller-o'));
+  $('.rangeslider').append($('#ruller'));
+
+  $('#ruller-o').css('width', `${$('.rangeslider').width()}px`);
+  $('#ruller').css('width', `${$('.rangeslider').width()}px`);
+
+  $('.input').on('input', function() {
+    var range = $(this).parents('.range-slider').find('.range');
+    if (+$(this).val() >= +$(range).attr('max')) {
+      $(this).attr('value', $(range).attr('max'));
+      $(this).val($(range).attr('max'));
+    } else if (+$(this).val() <= +$(range).attr('min')) {
+      $(this).attr('value', $(range).attr('min'));
+      $(this).val($(range).attr('min'));
     }
+    $(range).val($(this).val()).change();
+    $(range).attr('value', $(this).attr('value'));
   });
-  //
-  slider.noUiSlider.on('update', function( values, handle ) {
-    sliderValue.value = Math.round(values[handle]);
-  });
-
-  // var value;
-  //
-  // $('.range').change( function() {
-  //   value = $(this).val();
-  //   $(this).parents('.range-slider').find('.input').val(value);
-  //   console.log(value);
-  // });
-
 
 });
 sayHello();

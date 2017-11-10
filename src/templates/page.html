@@ -5,14 +5,146 @@ title: Index page
 
 {% block content %}
 
-<!--<div class="range-slider">-->
-<!--<input class="range" type="range" value="10" min="1" max="100">-->
-<!--<input type="text" class="input"/>-->
-<!--</div>-->
 <div class="range-slider">
   <input type="text" class="input">
-  <div id="slider"></div>
-  <p></p>
+  <input class="range" type="range" value="30" min="0" max="100" step="1" data-rangeslider>
 </div>
+
+<svg version="1.1" id="handle" x="0px" y="0px" viewBox="0 0 21 32" style="enable-background:new 0 0 21 32;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FF6F2B;}
+  .st1{fill:#FFFFFF;}
+</style>
+<path class="st0" d="M0,0h21v25c0,0-10,7-10,7c0.4,0-1.4,0-1.1,0c0,0-10-7-10-7V0z"/>
+<path class="st1" d="M10,9h1v11h-1V9z"/>
+</svg>
+<svg version="1.1" id="ruller" x="0px" y="0px" viewBox="0 0 360 20" style="enable-background:new 0 0 360 20;" xml:space="preserve">
+<style type="text/css">
+	.sp0{fill:#E3E3E3;}
+</style>
+<rect class="sp0" width="1" height="20"/>
+<rect x="31" class="sp0" width="1" height="20"/>
+<rect x="6" class="sp0" width="1" height="6"/>
+<rect x="13" class="sp0" width="1" height="6"/>
+<rect x="19" class="sp0" width="1" height="6"/>
+<rect x="25" class="sp0" width="1" height="6"/>
+<rect x="37" class="sp0" width="1" height="6"/>
+<rect x="44" class="sp0" width="1" height="6"/>
+<rect x="50" class="sp0" width="1" height="6"/>
+<rect x="56" class="sp0" width="1" height="6"/>
+<rect x="62" class="sp0" width="1" height="20"/>
+<rect x="93" class="sp0" width="1" height="20"/>
+<rect x="68" class="sp0" width="1" height="6"/>
+<rect x="75" class="sp0" width="1" height="6"/>
+<rect x="81" class="sp0" width="1" height="6"/>
+<rect x="87" class="sp0" width="1" height="6"/>
+<rect x="99" class="sp0" width="1" height="6"/>
+<rect x="106" class="sp0" width="1" height="6"/>
+<rect x="112" class="sp0" width="1" height="6"/>
+<rect x="118" class="sp0" width="1" height="6"/>
+<rect x="124" class="sp0" width="1" height="20"/>
+<rect x="155" class="sp0" width="1" height="20"/>
+<rect x="130" class="sp0" width="1" height="6"/>
+<rect x="137" class="sp0" width="1" height="6"/>
+<rect x="143" class="sp0" width="1" height="6"/>
+<rect x="149" class="sp0" width="1" height="6"/>
+<rect x="161" class="sp0" width="1" height="6"/>
+<rect x="168" class="sp0" width="1" height="6"/>
+<rect x="174" class="sp0" width="1" height="6"/>
+<rect x="180" class="sp0" width="1" height="6"/>
+<rect x="186" class="sp0" width="1" height="20"/>
+<rect x="217" class="sp0" width="1" height="20"/>
+<rect x="192" class="sp0" width="1" height="6"/>
+<rect x="199" class="sp0" width="1" height="6"/>
+<rect x="205" class="sp0" width="1" height="6"/>
+<rect x="211" class="sp0" width="1" height="6"/>
+<rect x="223" class="sp0" width="1" height="6"/>
+<rect x="230" class="sp0" width="1" height="6"/>
+<rect x="236" class="sp0" width="1" height="6"/>
+<rect x="242" class="sp0" width="1" height="6"/>
+<rect x="248" class="sp0" width="1" height="20"/>
+<rect x="279" class="sp0" width="1" height="20"/>
+<rect x="254" class="sp0" width="1" height="6"/>
+<rect x="261" class="sp0" width="1" height="6"/>
+<rect x="267" class="sp0" width="1" height="6"/>
+<rect x="273" class="sp0" width="1" height="6"/>
+<rect x="285" class="sp0" width="1" height="6"/>
+<rect x="292" class="sp0" width="1" height="6"/>
+<rect x="298" class="sp0" width="1" height="6"/>
+<rect x="304" class="sp0" width="1" height="6"/>
+<rect x="310" class="sp0" width="1" height="20"/>
+<rect x="340" class="sp0" width="1" height="20"/>
+<rect x="316" class="sp0" width="1" height="6"/>
+<rect x="323" class="sp0" width="1" height="6"/>
+<rect x="329" class="sp0" width="1" height="6"/>
+<rect x="334" class="sp0" width="1" height="6"/>
+<rect x="346" class="sp0" width="1" height="6"/>
+<rect x="353" class="sp0" width="1" height="6"/>
+<rect x="359" class="sp0" width="1" height="6"/>
+</svg>
+<svg version="1.1" id="ruller-o" x="0px" y="0px" viewBox="0 0 360 20" style="enable-background:new 0 0 360 20;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#ff6f2b;}
+</style>
+<rect class="st0" width="1" height="20"/>
+<rect x="31" class="st0" width="1" height="20"/>
+<rect x="6" class="st0" width="1" height="6"/>
+<rect x="13" class="st0" width="1" height="6"/>
+<rect x="19" class="st0" width="1" height="6"/>
+<rect x="25" class="st0" width="1" height="6"/>
+<rect x="37" class="st0" width="1" height="6"/>
+<rect x="44" class="st0" width="1" height="6"/>
+<rect x="50" class="st0" width="1" height="6"/>
+<rect x="56" class="st0" width="1" height="6"/>
+<rect x="62" class="st0" width="1" height="20"/>
+<rect x="93" class="st0" width="1" height="20"/>
+<rect x="68" class="st0" width="1" height="6"/>
+<rect x="75" class="st0" width="1" height="6"/>
+<rect x="81" class="st0" width="1" height="6"/>
+<rect x="87" class="st0" width="1" height="6"/>
+<rect x="99" class="st0" width="1" height="6"/>
+<rect x="106" class="st0" width="1" height="6"/>
+<rect x="112" class="st0" width="1" height="6"/>
+<rect x="118" class="st0" width="1" height="6"/>
+<rect x="124" class="st0" width="1" height="20"/>
+<rect x="155" class="st0" width="1" height="20"/>
+<rect x="130" class="st0" width="1" height="6"/>
+<rect x="137" class="st0" width="1" height="6"/>
+<rect x="143" class="st0" width="1" height="6"/>
+<rect x="149" class="st0" width="1" height="6"/>
+<rect x="161" class="st0" width="1" height="6"/>
+<rect x="168" class="st0" width="1" height="6"/>
+<rect x="174" class="st0" width="1" height="6"/>
+<rect x="180" class="st0" width="1" height="6"/>
+<rect x="186" class="st0" width="1" height="20"/>
+<rect x="217" class="st0" width="1" height="20"/>
+<rect x="192" class="st0" width="1" height="6"/>
+<rect x="199" class="st0" width="1" height="6"/>
+<rect x="205" class="st0" width="1" height="6"/>
+<rect x="211" class="st0" width="1" height="6"/>
+<rect x="223" class="st0" width="1" height="6"/>
+<rect x="230" class="st0" width="1" height="6"/>
+<rect x="236" class="st0" width="1" height="6"/>
+<rect x="242" class="st0" width="1" height="6"/>
+<rect x="248" class="st0" width="1" height="20"/>
+<rect x="279" class="st0" width="1" height="20"/>
+<rect x="254" class="st0" width="1" height="6"/>
+<rect x="261" class="st0" width="1" height="6"/>
+<rect x="267" class="st0" width="1" height="6"/>
+<rect x="273" class="st0" width="1" height="6"/>
+<rect x="285" class="st0" width="1" height="6"/>
+<rect x="292" class="st0" width="1" height="6"/>
+<rect x="298" class="st0" width="1" height="6"/>
+<rect x="304" class="st0" width="1" height="6"/>
+<rect x="310" class="st0" width="1" height="20"/>
+<rect x="340" class="st0" width="1" height="20"/>
+<rect x="316" class="st0" width="1" height="6"/>
+<rect x="323" class="st0" width="1" height="6"/>
+<rect x="329" class="st0" width="1" height="6"/>
+<rect x="334" class="st0" width="1" height="6"/>
+<rect x="346" class="st0" width="1" height="6"/>
+<rect x="353" class="st0" width="1" height="6"/>
+<rect x="359" class="st0" width="1" height="6"/>
+</svg>
 
 {% endblock %}
